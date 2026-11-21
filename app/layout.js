@@ -1,34 +1,24 @@
 import "./globals.css";
-import { Dela_Gothic_One, Caveat, Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import { Lilita_One, Plus_Jakarta_Sans } from "next/font/google";
 
-const delaGothic = Dela_Gothic_One({
+const lilita = Lilita_One({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-dela",
+  variable: "--font-chunky",
+  display: "swap",
 });
 
-const caveat = Caveat({
-  subsets: ["latin"],
-  weight: ["600", "700"],
-  variable: "--font-caveat",
-});
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-outfit",
-});
-
-const jakarta = Plus_Jakarta_Sans({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-body",
+  variable: "--font-sans",
+  display: "swap",
 });
 
 export const metadata = {
   title: "KOOKY KIND | Cookies That Don't Follow The Recipe",
   description:
-    "We bake playful, wildly delicious cookies with personality. Made with good ingredients and zero boring.",
+    "We bake playful, wildly delicious cookies with molten centers and clean ingredients. Zero boring rules.",
   icons: {
     icon: "/favicon.svg",
     apple: "/favicon.svg",
@@ -37,8 +27,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${delaGothic.variable} ${caveat.variable} ${outfit.variable} ${jakarta.variable}`}>
-      <body className="bg-[#FBF6EE] text-[#191817] font-sans antialiased selection:bg-[#FFD233] selection:text-[#191817]">
+    <html lang="en" className={`${lilita.variable} ${plusJakarta.variable}`}>
+      <body className="bg-[#EFECE6] text-[#2C1810] font-sans antialiased selection:bg-[#F3A218] selection:text-[#2C1810]">
         {children}
       </body>
     </html>
